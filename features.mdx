@@ -1,0 +1,145 @@
+---
+title: Core Features and Use Cases
+description: Explore the main capabilities of the documentation platform, including collaboration tools and organization methods tailored for development teams.
+---
+
+## Overview
+
+Zorisord Group Limited | Development-Team's documentation platform empowers your team to create, manage, and collaborate on project docs efficiently. You get powerful tools for real-time editing, version history, and role-based access, perfect for complex fintech models or biotech protocols.
+
+Use these core features to streamline workflows across your strategic verticals like Zoris Protocol or Zorisord Biotech.
+
+<Columns cols={3}>
+  <Card title="Rich Editing" icon="edit-3" href="#document-creation">
+    Create and format docs with Markdown, diagrams, and embeds.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes with Git integration and rollback capabilities.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#collaboration">
+    Invite teammates, set permissions, and review edits live.
+  </Card>
+</Columns>
+
+## Document Creation and Editing Tools
+
+Start building docs quickly with an intuitive editor supporting Markdown, code blocks, and interactive components.
+
+<Steps>
+  <Step title="Create New Doc" icon="plus">
+    Navigate to your workspace and select `New Document`. Choose a template for API refs or guides.
+  </Step>
+  <Step title="Edit Content" icon="edit">
+    Use the live preview to add headings, lists, and code. Embed images or videos directly.
+  </Step>
+  <Step title="Add Components" icon="components">
+    Insert tabs, cards, or steps via the toolbar for richer layouts.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Markdown,API Example">
+```markdown
+## Quickstart
+
+Install via npm:
+
+```bash
+npm install @zorisord/docs-sdk
+```
+```
+
+```javascript
+// Example API call
+const docs = await createDoc({
+  title: "Zoris Protocol Guide",
+  content: "# Overview\nFinancial modeling engine."
+});
+```
+</CodeGroup>
+
+<Callout kind="tip">
+  Pro tip: Use `{frontmatter}` in templates for dynamic YAML headers.
+</Callout>
+
+## Version Control for Docs
+
+Maintain clean history without losing work. Integrate with Git for branching and merges.
+
+<Tabs>
+  <Tab title="Git Workflow" icon="git-branch">
+    Push docs to your repo:
+    
+````bash
+git add docs/features.mdx
+git commit -m "Add fintech use case"
+git push origin main
+````
+
+    Rollback via UI: Select commit and `Restore`.
+  </Tab>
+  <Tab title="Built-in History" icon="clock">
+    View diffs and blame info directly in the editor. No external tools needed.
+  </Tab>
+</Tabs>
+
+## Collaboration and Permissions
+
+Invite your development team and control access granularly.
+
+| Role | Can Edit | Can Review | Can Publish |
+|------|----------|------------|-------------|
+| Admin | Yes | Yes | Yes |
+| Editor | Yes | Yes | No |
+| Viewer | No | Yes | No |
+
+<Expandable title="Advanced Permissions" default-open="false">
+  Use API for programmatic access:
+  
+  <ParamField path="userId" param-type="string" required="true">
+    Target user identifier.
+  </ParamField>
+  
+  <ParamField header="Authorization" param-type="string" required="true">
+    `Bearer YOUR_TOKEN`
+  </ParamField>
+</Expandable>
+
+## Use Cases for Fintech and Biotech Projects
+
+Tailor the platform to your verticals.
+
+<Tabs>
+  <Tab title="Fintech (Zoris Protocol)" icon="trending-up">
+    Document LMSR models and AMMs.
+    
+    ```mermaid
+    graph TD
+        A[User Prediction] --> B[Market Scoring]
+        B --> C[AMM Liquidity]
+        C --> D[Forecast Output]
+    ```
+    
+    Track alpha releases with version tags.
+  </Tab>
+  <Tab title="Biotech (Zorisord Biotech)" icon="activity">
+    Mandate roadmaps for microbial analysis.
+    
+    <Steps>
+      <Step title="Outline Mandate">
+        Create hierarchical pages for bioprocessing steps.
+      </Step>
+      <Step title="Collaborate">
+        Share with partners for feedback.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Columns cols={2}>
+  <Card title="Next: Quickstart" icon="book-open" href="/quickstart">
+    Set up your workspace in minutes.
+  </Card>
+  <Card title="API Reference" icon="code" href="/authentication">
+    Integrate programmatically.
+  </Card>
+</Columns>

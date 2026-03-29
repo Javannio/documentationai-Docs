@@ -1,0 +1,141 @@
+---
+title: Changelog
+description: Track updates and improvements to the Development-Team documentation platform, with details on recent releases and fixes.
+---
+
+## Recent Updates
+
+Stay informed about the latest enhancements to your Zorisord Group Limited | Development-Team documentation platform. We release updates regularly to improve usability, performance, and features.
+
+<Callout kind="info">
+  Check the [release notes](https://github.com/zorisord/development-team/releases) on GitHub for full details and migration guides.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+  
+## New Features
+
+- Added support for custom brand colors (`#7a9161` for Zorisord branding) in the theme configuration.
+- Introduced Mermaid diagram rendering for infrastructure flowcharts.
+
+## Improvements
+
+- Enhanced search functionality with fuzzy matching for better topic discovery.
+- Optimized page load times by 40% through improved asset bundling.
+
+## Bug Fixes
+
+- Fixed collapsible sections not expanding on mobile devices.
+- Resolved anchor link scrolling issues in long documentation pages.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+  
+## New Features
+
+- Integrated `Tabs` and `Steps` components for better tutorial workflows.
+- Added `ParamField` and `ResponseField` for API documentation pages.
+
+## Bug Fixes
+
+- Corrected JSX parsing errors in nested code blocks.
+- Fixed frontmatter validation for YAML descriptions with special characters.
+
+## Improvements
+
+- Updated Lucide icon library to latest version for richer visual elements.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+  
+## Initial Release
+
+- Launched core MDX documentation platform with full component support.
+- Included `Update`, `Card`, `Columns`, and `Callout` components out-of-the-box.
+- Added starter templates for introduction, quickstart, and changelog pages.
+
+## Breaking Changes
+
+- Initial setup requires Node.js `{>=18}` for optimal performance.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade your documentation platform to the latest version.
+
+<Steps>
+  <Step title="Backup Your Site" icon="database">
+    
+    Create a backup of your current `docs/` directory:
+    
+````bash
+git checkout main
+cp -r docs docs-backup-$(date +%Y%m%d)
+````
+
+  </Step>
+  
+  <Step title="Install Updates" icon="download">
+    
+    Update dependencies using your package manager:
+    
+    <CodeGroup tabs="npm,yarn">
+```bash
+npm install docs-platform@latest
+```
+```bash
+yarn add docs-platform@latest
+```
+    </CodeGroup>
+    
+  </Step>
+  
+  <Step title="Rebuild and Deploy" icon="rocket">
+    
+    Rebuild the site and deploy:
+    
+````bash
+npm run build
+npm run deploy
+````
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  After upgrading, test your custom components to ensure compatibility. Refer to the migration guide for v1.2.0 changes.
+</Callout>
+
+## Upcoming Roadmap
+
+Explore planned features that will enhance your documentation experience.
+
+<Columns cols={2}>
+  <Card title="AI-Powered Search" icon="search" href="/roadmap/ai-search">
+    Semantic search across all documentation pages using natural language queries.
+  </Card>
+  <Card title="Multi-Language Support" icon="globe" href="/roadmap/i18n">
+    Automatic translation and RTL support for global teams.
+  </Card>
+  <Card title="Analytics Dashboard" icon="bar-chart-3" href="/roadmap/analytics">
+    Track page views and user engagement directly in the admin panel.
+  </Card>
+  <Card title="Versioned Docs" icon="git-branch" href="/roadmap/versioning">
+    Maintain multiple documentation versions for different releases.
+  </Card>
+</Columns>
+
+<Expandable title="How to Contribute to the Roadmap" default-open="false">
+  
+  Share your feedback via GitHub issues or our community forum. Prioritized features include:
+  
+  | Feature | Status | Votes |
+  |---------|--------|-------|
+  | Dark Mode | Planned | 45 |
+  | Offline Support | In Progress | 32 |
+  | Custom Domains | Q1 2025 | 28 |
+
+</Expandable>

@@ -1,0 +1,140 @@
+---
+title: Getting Started with Development-Team Docs
+description: Step-by-step guide to set up your account and create your first documentation project in under 5 minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+<Callout kind="info">
+- A modern web browser like Chrome or Firefox
+- A valid email address for account verification
+- Optional: Git installed for importing repositories
+</Callout>
+
+No software installation required to begin.
+
+## Step 1: Register and Log In
+
+Follow these steps to create your account quickly.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to the Development-Team Docs dashboard at `https://dashboard.example.com`.
+
+    Click **Sign Up** in the top right corner.
+  </Step>
+
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, full name, and a secure password.
+
+    Accept the terms of service and click **Create Account**.
+  </Step>
+
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification email from Development-Team Docs.
+
+    Click the verification link to activate your account and log in automatically.
+  </Step>
+</Steps>
+
+## Step 2: Create Your First Documentation Space
+
+Once logged in, set up a space for your Zorisord Group Limited project documentation.
+
+<Steps>
+  <Step title="New Space" icon="plus">
+    From the dashboard, click **New Documentation Space**.
+
+    Enter a name like `Zorisord Development-Team Docs` and select a template (e.g., "Starter Kit").
+  </Step>
+
+  <Step title="Customize Settings" icon="settings">
+    Choose your brand color (`#7a9161`) and add the slogan: "Dedicating capital and intellect to critical infrastructure for developing economies".
+
+    Click **Create Space** to generate your workspace.
+  </Step>
+</Steps>
+
+## Step 3: Import Existing Project Files
+
+Bring in your current docs from GitHub, GitLab, or local files.
+
+<Tabs>
+  <Tab title="GitHub" icon="github">
+    Connect your repository directly.
+
+    <Steps>
+      <Step title="Authorize">
+        Click **Import from GitHub** and authorize the app.
+      </Step>
+      <Step title="Select Repo">
+        Choose your repo (e.g., `zorisord/development-team-docs`) and branch (`main`).
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="CLI" icon="terminal">
+    Use the Development-Team CLI for advanced imports.
+
+````bash
+npm install -g @development-team/cli
+dt-docs login --email your@email.com
+dt-docs import /path/to/your/docs --space-id YOUR_SPACE_ID
+````
+  </Tab>
+
+  <Tab title="Manual Upload" icon="upload">
+    Drag and drop Markdown or MDX files into the **Files** tab.
+
+    Supports bulk upload up to 100MB.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  After importing, review files in the editor. MDX components like `<Callout>` and `<Steps>` render live previews.
+</Callout>
+
+## Step 4: Basic Workspace Navigation
+
+Your workspace includes these key areas:
+
+| Section | Purpose | Icon |
+|---------|---------|------|
+| **Editor** | Write and preview MDX docs | `edit-3` |
+| **Files** | Manage pages and assets | `folder` |
+| **Preview** | Live site preview | `eye` |
+| **Publish** | Deploy to custom domain | `globe` |
+
+Use the sidebar to switch between spaces. Search with `<kbd>Ctrl</kbd>+<kbd>K</kbd>`.
+
+## Next Steps
+
+Explore advanced features to enhance your Zorisord documentation.
+
+<Columns cols={2}>
+  <Card title="Customize Themes" icon="palette" href="/configuration">
+    Adjust layouts, colors, and components for your brand.
+  </Card>
+
+  <Card title="API Integration" icon="code" href="/authentication">
+    Securely connect external data sources.
+  </Card>
+
+  <Card title="Collaboration" icon="users" href="/introduction">
+    Invite team members and manage permissions.
+  </Card>
+
+  <Card title="Version History" icon="git-branch" href="/changelog">
+    Track changes and roll back as needed.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **Import fails?** Check repo permissions and file size limits (`<50MB` per file).
+  - **Preview not updating?** Clear cache with `<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>`.
+  - Need help? Contact support at `support@development-team.com`.
+</Expandable>
+
+You're now ready to document Zorisord Group Limited's Development-Team projects efficiently!
